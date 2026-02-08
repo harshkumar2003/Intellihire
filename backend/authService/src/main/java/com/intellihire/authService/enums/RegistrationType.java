@@ -1,4 +1,4 @@
-package com.intellihire.authService.model;
+package com.intellihire.authService.enums;
 
 public enum RegistrationType
 {

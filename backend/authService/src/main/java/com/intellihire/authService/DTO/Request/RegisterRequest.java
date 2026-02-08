@@ -1,7 +1,6 @@
 package com.intellihire.authService.DTO.Request;
 
-import com.intellihire.authService.model.RegistrationType;
-import com.intellihire.authService.model.Role;
+import com.intellihire.authService.enums.RegistrationType;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

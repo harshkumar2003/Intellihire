@@ -18,7 +18,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
+@Table(name = "users",
+        indexes = {
+            @Index(name = "idx_users_email",columnList = "email")
+        }
+)
 public class User
 {
     @Id
@@ -31,13 +35,16 @@ public class User
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private boolean enabled = true;
+
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Provider provider;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
-
     @CreationTimestamp
     @Column(updatable = false)
     private Instant createdAt;
